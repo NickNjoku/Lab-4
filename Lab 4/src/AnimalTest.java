@@ -71,12 +71,16 @@ public class AnimalTest
     public void equalsTest() throws AssertException
     {
     	Animal test = new Animal("red", "Monkey", 25.0, 5.5);
-    	Animal test1 = new Animal("Green", "Monkey", 25.0, 5.5);
+    	Animal test1 = new Animal("Red", "Monkey", 25.0, 5.5);
+    	Animal test2 = new Animal("Green", "Butterfly", 1.0,0.9);
     	
-    	boolean expected = false;
+    	boolean expected = true;
     	boolean actual = test.equals(test1);
     	
     	Assert.assertEquals(expected, actual);
+    	
+    	boolean expectedCase2 = false;
+    	boolean actualCase2 = test2.equals(test1);
     }
 }
 

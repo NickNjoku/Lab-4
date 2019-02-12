@@ -48,7 +48,9 @@ public class EquipmentTest
 	}
 	
 	/**
-	 * 
+	 * Teseting Equipment class equals method
+	 * method will return true if all five fields being compared all equal each other
+	 * if not all five fields equal each other than method return fasle
 	 */
 	public void equalsEquipmentTest() throws AssertException
 	{
