@@ -127,31 +127,31 @@ public class Equipment
         if(otherEq.getName() == this.getName())
         {
         	++count;
-        	//return false;
+        	return true;
         }
         
         if(otherEq.getCount() == this.getCount())
         {
         	++count;
-        	//return false;
+        	return true;
         }
         
         if(otherEq.getTotalWeight() == this.getTotalWeight())
         {
         	++count;
-        	//return false;
+        	return true;
         }
         
         if(otherEq.getTotalPrice() == this.getTotalPrice())
         {
         	++count;
-        	//return false;
+        	return true;
         }
         
         if(otherEq.getDescription() == this.getDescription())
         {
         	++count;
-        	//return false;
+        	return true;
         }
         if(count == 5)
         {
