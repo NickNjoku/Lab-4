@@ -123,41 +123,48 @@ public class Equipment
         Equipment otherEq = (Equipment)other;
 
         // Check that all fields match (name, count, totalWeight, totalPrice, and description):
-        int count = 0;
-        if(otherEq.getName() != this.getName())
+        
+        int num = 0;
+        
+        if(otherEq.getName().equalsIgnoreCase(this.getName()))
         {
-        	++count;
-        	return false;
+        	
+        	++num;
+        	
         }
         
-        if(otherEq.getCount() != this.getCount())
+        if(otherEq.getCount() == this.getCount())
         {
-        	++count;
-        	return false;
+        	++num;
+        	
         }
         
-        if(otherEq.getTotalWeight() != this.getTotalWeight())
+        if(otherEq.getTotalWeight() == this.getTotalWeight())
         {
-        	++count;
-        	return false;
+        	
+        	++num;	
         }
         
-        if(otherEq.getTotalPrice() != this.getTotalPrice())
+        if(otherEq.getTotalPrice() == this.getTotalPrice())
         {
-        	++count;
-        	return false;
+        	
+        	++num;
         }
         
-        if(otherEq.getDescription() != this.getDescription())
+        if(otherEq.getDescription().equalsIgnoreCase(this.getDescription()))
         {
-        	++count;
-        	return false;
+        	
+        	++num;
         }
-        if(count != 0)
+     
+        if(num == 5)
         {
-        	return false;
+        	return true;
         }
-        return true;
         
+        else 
+        {
+        return false;
+        }
     }
 }

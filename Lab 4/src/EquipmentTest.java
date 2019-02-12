@@ -56,30 +56,24 @@ public class EquipmentTest
 		
 		String strg = "Belt/2,5.97,889.00,Bat belt that holds equipment";
 		
-		String strg1 = "Balt/2,5.97,889.00,Bat belt that holds equipment";
+		String strg1 = "Belt/2,5.97,889.00,Bat belt that holds equipment";
 		
-		Equipment test = new Equipment("Belt/2,5.97,889.00,Bat belt that holds equipment");
-		Equipment test1 = new Equipment("Belt/2,5.97,889.00,Bat belt that holds equipment");
+		String strg2 = "Rope/1,2.43,145.44,Rope that is super strong and won't break no matter what";
+		
+		Equipment test = new Equipment(strg);
+		Equipment test1 = new Equipment(strg1);
+		Equipment test2 = new Equipment(strg2);
 		
 		boolean expected = true;
 		boolean actual = test.equals(test1);
 		
-		System.out.println(test.getName());
-		System.out.println(test1.getName());
+		boolean expectedCase2 = false;
+		boolean actualCase2 = test2.equals(test);
 		
-		System.out.println(test.getCount());
-		System.out.println(test1.getCount());
 		
-		System.out.println(test.getTotalWeight());
-		System.out.println(test1.getTotalWeight());
-		
-		System.out.println(test.getTotalPrice());
-		System.out.println(test1.getTotalPrice());
-		
-		System.out.println(test.getDescription());
-		System.out.println(test1.getDescription());
-		
+
 		Assert.assertEquals(expected, actual);
+		Assert.assertEquals(expectedCase2, actualCase2);
 		
 		
 	}
