@@ -52,14 +52,16 @@ public class EquipmentTest
 	 */
 	public void equalsEquipmentTest() throws AssertException
 	{
+		
+		
 		String strg = "Belt/2,5.97,889.00,Bat belt that holds equipment";
 		
 		String strg1 = "Balt/2,5.97,889.00,Bat belt that holds equipment";
 		
-		Equipment test = new Equipment(strg);
-		Equipment test1 = new Equipment(strg1);
+		Equipment test = new Equipment("Belt/2,5.97,889.00,Bat belt that holds equipment");
+		Equipment test1 = new Equipment("Belt/2,5.97,889.00,Bat belt that holds equipment");
 		
-		boolean expected = false;
+		boolean expected = true;
 		boolean actual = test.equals(test1);
 		
 		System.out.println(test.getName());
